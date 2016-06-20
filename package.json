@@ -1,0 +1,29 @@
+{
+  "name": "reddit_parser",
+  "version": "1.0.0",
+  "description": "An reddit parser",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ubcent/redditParser.git"
+  },
+  "keywords": [
+    "nodejs",
+    "reddit",
+    "aggregation"
+  ],
+  "author": "Dmitry Bondarchuk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ubcent/redditParser/issues"
+  },
+  "homepage": "https://github.com/ubcent/redditParser#readme",
+  "dependencies": {
+    "co": "^4.6.0",
+    "co-request": "^1.0.0",
+    "lodash": "^4.13.1"
+  }
+}
