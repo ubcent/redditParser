@@ -8,18 +8,17 @@ module.exports = co(function*(){
   // Забираем параметры командной строки
   const argv = minimist(process.argv.slice(2));
 
-  console.log(argv);
-
   // Забираем статьи
   let articles = yield require('./modules/loader');
 
-  if(argv.format) {
-    articles = yield require('./modules/converter')(articles, argv.format);
-  } else {
-    articles = yield require('./modules/converter')(articles, config.defaults.format);
-  }
-
+  // Сортируем
   articles = require('./modules/sorter')(articles, argv.orderBy, argv.order);
+
+  // Забираем из параметров командной строки нужное
+  const {format, separator, tableName} = argv;
+
+  // Преобразуем в нужный формат
+  articles = yield require('./modules/converter')(articles, {format, separator, tableName});
 
   console.log(articles);
 }).catch(console.log.bind(console));
