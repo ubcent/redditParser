@@ -1,5 +1,15 @@
 # Just another Reddit parser
 
+## Консольное приложение
+
+### Установка
+
+```javascript
+npm install
+```
+
+### Запуск
+
 ```javascript
 node --harmony index.js
 ```
@@ -7,8 +17,6 @@ or
 ```javascript
 npm run start
 ```
-
-## Консольное приложение
 
 ### Параметры
 
