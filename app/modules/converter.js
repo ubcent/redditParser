@@ -2,17 +2,20 @@
 
 const co      = require('co');
 const config  = require('../config/main');
+const _       = require('co-lodash');
+const fs      = require('co-fs');
 
-module.exports = (data, format = config.defaults.format) => co(function*() {
-  switch(format) {
-    case 'csv':
-      return data;
-      break;
-    case 'sql':
-      return data;
-      break;
-    default:
-      return new Error('Unexpected outer format');
-      break;
+module.exports = (articles, params) => co(function*() {
+  // Инициализируем дефолтными значениями, если не задано
+  typeof params.format == 'undefined' && (params.format = config.defaults.format);
+  typeof params.separator == 'undefined' && (params.separator = config.defaults.separator);
+  typeof params.tableName == 'undefined' && (params.tableName = config.defaults.tableName);
+
+  const exists = yield fs.exists(process.cwd() + '/app/modules/formats/' + params.format + '.js');
+  console.log(articles.length);
+  if(!exists) {
+    return new Error('Unexpected format');
   }
+
+  return require('./formats/' + params.format)(articles, params);
 });
