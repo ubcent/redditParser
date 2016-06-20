@@ -13,7 +13,7 @@ module.exports = (articles, params) => {
 
       line += '"' + articles[i][index] + '"';
     }
-    sql += '(' + line + ')' + (i == articles.length - 1 ? '' : ', ');
+    sql += '(' + line + ')' + (i == articles.length - 1 ? ';' : ', ');
   }
 
   return sql;

@@ -17,6 +17,11 @@ module.exports = co(function*(){
   // Забираем из параметров командной строки нужное
   const {format, separator, tableName} = argv;
 
+  if(argv.a) {
+    articles = yield require('./modules/aggregator')(articles);
+    articles = yield require('./modules/sorter')(articles, ['count', 'sum'], 'desc');
+  }
+
   // Преобразуем в нужный формат
   articles = yield require('./modules/converter')(articles, {format, separator, tableName});
 
