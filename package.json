@@ -5,7 +5,7 @@
   "main": "index.js",
   "engines": {
     "node": "4.4.0",
-    "npm": "3.5.1"
+    "npm": "2.14.20"
   },
   "scripts": {
     "start": "node --harmony index.js",
@@ -27,8 +27,11 @@
   },
   "homepage": "https://github.com/ubcent/redditParser#readme",
   "dependencies": {
+    "chai": "^3.5.0",
     "co": "^4.6.0",
     "co-request": "^1.0.0",
-    "lodash": "^4.13.1"
+    "lodash": "^4.13.1",
+    "minimist": "^1.2.0",
+    "mocha": "^2.5.3"
   }
 }
