@@ -7,8 +7,8 @@ const expect = require('chai').expect;
 const appPromise = require(cwd + '/app');
 
 describe('App', () => {
-  it('должен работать', done => {
-
-    expect(appPromise.to.be.an('object'));
-  });
+  it('должен работать', (done) => co(function*(){
+    done();
+    expect(yield appPromise).to.be.an('object');
+  }));
 });

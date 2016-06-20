@@ -9,7 +9,7 @@
   },
   "scripts": {
     "start": "node --harmony index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/.bin/mocha --harmony --recursive"
   },
   "repository": {
     "type": "git",
