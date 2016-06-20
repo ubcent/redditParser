@@ -1,17 +1,16 @@
 'use strict';
 
 module.exports = (articles, params) => {
-  let csv = '', i;
-  console.log(articles.length);
-  for (i = 0; i < articles.length; i++) {
-    console.log(i);
-    let line = '', index;
-    for (index in articles[i]) {
-      if (line != '') line += params.separator;
+  let csv = '';
+  const {separator} = params;
 
-      line += articles[i][index];
+  for (let i = 0; i < articles.length; i++) {
+    let line = '';
+    for (let index in articles[i]) {
+      if (line != '') line += separator;
+
+      line += '"' + articles[i][index] + '"';
     }
-    console.log(line);
     csv += line + '\r\n';
   }
 

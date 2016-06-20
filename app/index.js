@@ -12,7 +12,7 @@ module.exports = co(function*(){
   let articles = yield require('./modules/loader');
 
   // Сортируем
-  articles = require('./modules/sorter')(articles, argv.orderBy, argv.order);
+  articles = yield require('./modules/sorter')(articles, argv.orderBy, argv.order);
 
   // Забираем из параметров командной строки нужное
   const {format, separator, tableName} = argv;
@@ -20,5 +20,6 @@ module.exports = co(function*(){
   // Преобразуем в нужный формат
   articles = yield require('./modules/converter')(articles, {format, separator, tableName});
 
+  // Выводим результат
   console.log(articles);
 }).catch(console.log.bind(console));

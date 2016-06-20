@@ -12,7 +12,7 @@ module.exports = (articles, params) => co(function*() {
   typeof params.tableName == 'undefined' && (params.tableName = config.defaults.tableName);
 
   const exists = yield fs.exists(process.cwd() + '/app/modules/formats/' + params.format + '.js');
-  console.log(articles.length);
+
   if(!exists) {
     return new Error('Unexpected format');
   }
