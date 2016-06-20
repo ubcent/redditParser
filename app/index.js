@@ -1,7 +1,13 @@
-const co = require('co');
+'use strict';
+
+const co        =  require('co');
+const minimist  =  require('minimist');
 
 module.exports = co(function*(){
-  const json = yield require('./modules/loader');
+  // Забираем параметры командной строки
+  const argv = minimist(process.argv.slice(2));
 
-  console.log(json);
-});
+  // Забираем статьи
+  const articles = yield require('./modules/loader');
+
+}).catch(console.log.bind(console));

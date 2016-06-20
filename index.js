@@ -1,3 +1,7 @@
 'use strict';
 
-require('./app');
+const appPromise = require('./app');
+
+appPromise.then(app => {
+  // ,,,
+});
