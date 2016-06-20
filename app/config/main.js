@@ -1,5 +1,5 @@
 module.exports = {
-  fields: ['id', 'title', 'created_utc', 'score'],
+  fields: {'id': false, 'title': false, 'created_utc': true, 'score': true},
   url: 'http://www.reddit.com/r/javascript/.json',
   defaults: {
     format: 'csv',

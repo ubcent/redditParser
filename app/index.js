@@ -7,7 +7,10 @@ module.exports = co(function*(){
   // Забираем параметры командной строки
   const argv = minimist(process.argv.slice(2));
 
+  console.log(argv);
+
   // Забираем статьи
   const articles = yield require('./modules/loader');
+
 
 }).catch(console.log.bind(console));

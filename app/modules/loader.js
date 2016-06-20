@@ -13,6 +13,6 @@ module.exports = co(function* () {
   });
 
   return yield* _.coMap(result.body.data.children, function*(article) {
-    return yield _.pick(article.data, config.fields);
+    return yield _.pick(article.data, _.keys(config.fields));
   });
 });
