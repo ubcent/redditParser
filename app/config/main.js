@@ -1,5 +1,6 @@
 module.exports = {
-  fields: {'id': false, 'title': false, 'created_utc': true, 'score': true},
+  // Наименования поля, которое попадает в выборку и его видимость в выдаче
+  fields: {'id': true, 'title': true, 'created_utc': true, 'score': true, 'domain': false},
   url: 'http://www.reddit.com/r/javascript/.json',
   defaults: {
     format: 'csv',

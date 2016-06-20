@@ -12,5 +12,5 @@ module.exports = co(function*(){
   // Забираем статьи
   const articles = yield require('./modules/loader');
 
-
+  console.log(articles);
 }).catch(console.log.bind(console));
