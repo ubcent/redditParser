@@ -29,6 +29,7 @@
   "dependencies": {
     "chai": "^3.5.0",
     "co": "^4.6.0",
+    "co-fs": "^1.2.0",
     "co-lodash": "0.0.4",
     "co-request": "^1.0.0",
     "minimist": "^1.2.0",
