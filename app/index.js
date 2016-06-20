@@ -20,5 +20,6 @@ module.exports = co(function*(){
   // Преобразуем в нужный формат
   articles = yield require('./modules/converter')(articles, {format, separator, tableName});
 
+  // Выводим результат
   console.log(articles);
 }).catch(console.log.bind(console));
