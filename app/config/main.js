@@ -9,7 +9,7 @@ module.exports = {
   defaults: {
     format: 'csv',
     order: 'asc',
-    orderBy: 'id',
+    orderBy: 'score',
     separator: ';',
     tableName: 'articles'
   }
