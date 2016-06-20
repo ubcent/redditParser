@@ -1,8 +1,12 @@
 {
   "name": "reddit_parser",
   "version": "1.0.0",
-  "description": "An reddit parser",
+  "description": "Just another Reddit parser",
   "main": "index.js",
+  "engines": {
+    "node": "4.4.0",
+    "npm": "3.5.1"
+  },
   "scripts": {
     "start": "node --harmony index.js",
     "test": "echo \"Error: no test specified\" && exit 1"

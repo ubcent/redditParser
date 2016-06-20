@@ -1,4 +1,4 @@
-# redditParser
+# Just another Reddit parser
 
 ```javascript
 node --harmony index.js
