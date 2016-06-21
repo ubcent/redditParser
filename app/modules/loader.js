@@ -3,7 +3,7 @@
 const co      =   require('co');
 const request =   require('co-request');
 const _       =   require('co-lodash');
-const config  =   require('../config/main');
+const config  =   require('../config');
 
 module.exports = co(function* () {
   const result = yield request({

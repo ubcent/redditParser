@@ -1,7 +1,7 @@
 'use strict';
 
 const co      = require('co');
-const config  = require('../config/main');
+const config  = require('../config');
 const _       = require('co-lodash');
 const fs      = require('co-fs');
 
