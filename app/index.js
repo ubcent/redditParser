@@ -2,7 +2,6 @@
 
 const co        =  require('co');
 const minimist  =  require('minimist');
-const config    =  require('./config/main');
 
 module.exports = co(function*(){
   // Забираем параметры командной строки
