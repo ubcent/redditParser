@@ -8,8 +8,8 @@
     "npm": "2.14.20"
   },
   "scripts": {
-    "start": "node --harmony index.js",
-    "test": "./node_modules/.bin/mocha --harmony --recursive"
+    "start": "node --harmony_destructuring index.js",
+    "test": "./node_modules/.bin/mocha --harmony_destructuring --recursive"
   },
   "repository": {
     "type": "git",
