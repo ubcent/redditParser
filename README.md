@@ -11,7 +11,7 @@ npm install
 ### Запуск
 
 ```javascript
-node --harmony index.js
+node --harmony_destructuring index.js
 ```
 or
 ```javascript
